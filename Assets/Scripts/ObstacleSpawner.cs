@@ -19,11 +19,11 @@ public class ObstacleManager : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;  // השגת השחקן
         minSpawnDistance = PlayerPrefs.GetFloat("minSpawnDistance");
-        Debug.Log("distat  start the game whit "+minSpawnDistance);
-         lastSpawnTime = Time.time;
+        Debug.Log("distat  start the game whit " + minSpawnDistance);
+        lastSpawnTime = Time.time;
 
-       
-       
+
+
     }
 
     void Update()
@@ -42,8 +42,8 @@ public class ObstacleManager : MonoBehaviour
         float spawnDistance;
 
 
-            spawnDistance = Random.Range(minSpawnDistance, maxSpawnDistance);
-       
+        spawnDistance = Random.Range(minSpawnDistance, maxSpawnDistance);
+
 
         // קביעת המיקום של המכשול
         Vector3 spawnPosition = playerTransform.position + playerTransform.forward * spawnDistance;

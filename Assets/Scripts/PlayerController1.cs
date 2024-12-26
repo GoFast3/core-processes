@@ -16,7 +16,7 @@ public class PlayerController1 : MonoBehaviour
     private Touch touch;
     private UnityEngine.Vector2 initPos;
     private UnityEngine.Vector2 endPos;
-     public float minSpawnDistance = 10f;  // המרחק הקרוב
+    public float minSpawnDistance = 10f;  // המרחק הקרוב
 
 
     void Start()
@@ -52,7 +52,7 @@ public class PlayerController1 : MonoBehaviour
             if (desiredLane < 2)  // תתקן את הבדיקה כך שתהיה נכונה
             {
                 desiredLane++;
-              
+
             }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -60,11 +60,11 @@ public class PlayerController1 : MonoBehaviour
             if (desiredLane > 0)  // תתקן את הבדיקה כך שתהיה נכונה
             {
                 desiredLane--;
-              
+
             }
         }
 
-       
+
 
         // חישוב המיקום החדש
         UnityEngine.Vector3 targetPosition = transform.position; // קח את המיקום הנוכחי של השחקן
@@ -77,13 +77,13 @@ public class PlayerController1 : MonoBehaviour
         else if (desiredLane == 2)
             targetPosition.x = 4;  // בנתיב 2, המיקום הוא ב-x=4
 
-       
+
 
         transform.position = targetPosition;  // עדכון המיקום
 
-       
+
         controller.center = controller.center;
-     
+
     }
 
     private void FixedUpdate()
